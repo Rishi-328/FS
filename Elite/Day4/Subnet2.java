@@ -32,3 +32,30 @@ Sample Output-2:
 192.0.2.0 192.0.2.255
 
 */
+import java.util.*;
+public class Subnet2{
+    public static int ipToInt(String ip){
+        String[] parts = ip.split("\\.");
+        int a = Integer.parseInt(parts[0]);
+        int b = Integer.parseInt(parts[1]);
+        int c = Integer.parseInt(parts[2]);
+        int d = Integer.parseInt(parts[3]);
+        return (a<<24)|(b<<16)|(c<<8)|d;
+    }
+    public static String intToIp(int ip){
+        return String.format("%d.%d.%d.%d", (ip>>24)&0xFF,(ip>>16)&0xFF,(ip>>8)&0xFF,ip&0xFF);
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String ip = sc.nextLine();
+        int mask = sc.nextInt();
+        int ipInt = ipToInt(ip);
+        int subnet = 0xFFFFFFFF << (32-mask);
+        int network = ipInt & subnet;
+        int broadcast = network | ~subnet;
+        System.out.print(intToIp(network)+" "+intToIp(broadcast));
+
+        
+
+    }
+}
