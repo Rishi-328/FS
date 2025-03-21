@@ -1,0 +1,28 @@
+SO,
+I was learning regular expressions and these were useful things that one should know
+1 {} :acts a quantifier meaning for instance {4} this would see four occurences.
+2 . : '.' is used to identify a single character
+3 ^ : indicates start of a string
+4 $ : End of a string
+5 * : finds zero or more occurrences
+6 + : one or more occurrences
+7 ? :zero or one occurrence and this is optional
+8 [] : matches any character inside the square bracket
+9 | : used as OR
+10 () : anything specified inside this is used for grouping (ab)+ finds anything that starts with ab it matches ab, abb, abc, abb, aba, ....
+11 \ :escape character that changes the meaning of the character following it.
+For instance if ur regular expression has '(' but in general they are used for grouping then u can use ( this will match '('.
+12 \b this doesn't match anything but when used it marks as a start or end of a word. i.e, it looks for spaces or punctuations
+
+
+^ , $ → start match at beginning / ending of the string.
+| → alternation , eg: (a | o)
+dot → match single character.
+asterisk → repetition of previous character zero or more times.
+plus → repetition of previous character one or more times.
+[ abc ] → matches either a , b or c.
+[ ^abc ] → match everything except a , b and c.
+? → matches the character either 0 or 1 time , optional character.
+{ n , m } → between n and m times the preceding element
+\d , \s → match ONE digit and \s for ONE space.
+\w → match ONE word character , its like [a-zA-Z0-9_]

@@ -1,0 +1,4 @@
+rce - remote code execution
+ajp connector 
+apache is a web server
+diff bw web server and application server
