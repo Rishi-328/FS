@@ -1,0 +1,4 @@
+aws lambda
+aws sns - > publishers and subscribers
+aws sqs -> Anyone can put and receive msgs from the queue
+
